@@ -93,8 +93,6 @@ int main() {
 
 	cout << endl << "Кількість чисел кратних 7 і 9 = " << counter;
 
-	delete[] arr;
-	delete[] matrix;
 	delete[] Triple;
 	
 	return 0;

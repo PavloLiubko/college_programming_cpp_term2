@@ -96,5 +96,9 @@ int main() {
 
 	cout << endl << "Максимальний елемент = " << maximum << endl << "Мінімальний елемент = "  << minimum;
 
+	delete[] arr;
+	delete[] row;
+	delete[] G;
+	
 	return 0;
 } 

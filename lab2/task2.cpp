@@ -86,5 +86,9 @@ int main() {
 
 	cout << "Кількість символів у найбільшому слові = " << biggest << " кількість символів у найменшому слові = " << smallest;
 
+	delete[] probels;
+	delete[] words_length;
+	delete[] words;
+
 	return 0;
 }

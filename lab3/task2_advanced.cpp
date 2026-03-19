@@ -9,7 +9,7 @@ int main() {
 
 	string S;
 
-	cout << "Введіть якийсь текст(латиницею):";
+	cout << "Введіть якийсь текст:";
 	getline(cin, S);
 
 	int words_amount = 1;

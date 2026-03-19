@@ -9,7 +9,7 @@ int main() {
 
 	string S;
 
-	cout << "Enter first text: " ;
+	cout << "Введіть якийсь текст: " ;
 	getline(cin, S);
 
 	int left_brackets = 0;
@@ -25,13 +25,13 @@ int main() {
 
 	if (left_brackets == right_brackets) {
 
-		cout << "Bracket`s amount is balanced.";
+		cout << "Кількість дужок збалансована.";
 
 	}
 
 	else {
 	
-		cout << "Bracket`s amount isn`t balanced.";
+		cout << "Кількість дужок незбалансована.";
 	
 	}
 

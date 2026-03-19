@@ -22,7 +22,7 @@ int main() {
 
 	string S;
 
-	cout << "Введіть якийсь текст(бажано латиницею):";
+	cout << "Введіть якийсь текст:";
 	getline(cin, S);
 
 	for (int i = 0; i < S.length(); i++) {

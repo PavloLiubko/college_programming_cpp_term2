@@ -23,7 +23,7 @@ int main() {
 
 	string S;
 
-	cout << "Enter something:";
+	cout << "Введіть якийсь текст:";
 	getline(cin, S);
 	int offset = 1;
 
@@ -38,7 +38,7 @@ int main() {
 
 	}
 
-	cout << "Changed row:" << temporary;
+	cout << "Змінений рядок:" << temporary;
 
 	return 0;
 }

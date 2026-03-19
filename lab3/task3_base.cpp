@@ -30,13 +30,13 @@ int main() {
 
 	string X, Y;
 
-	cout << "Enter first text: " ;
+	cout << "Введіть якийсь текст: " ;
 	getline(cin, X);
 
 	cout << "Enter second text: ";
 	getline(cin, Y);
 
-	cout << "Amount of vowels in first text: " << hasLetter(X) << endl << "Amount of vowels in second text: " << hasLetter(Y);
+	cout << "Кількість голосних в першому тексті: " << hasLetter(X) << endl << "Кількість голосних в другому тексті: " << hasLetter(Y);
 
 	return 0;
 }

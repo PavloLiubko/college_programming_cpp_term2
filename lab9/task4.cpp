@@ -78,6 +78,7 @@ int main() {
 	cout << endl << "Порядкові номери трьох найбільших за модулем елементів масиву:" << endl;
 	cout <<  biggests_indexes[0]+1 << '\t' << biggests_indexes[1]+1 << '\t' << biggests_indexes[2]+1;
 
+	delete[] arr;
 
 	return 0;
 

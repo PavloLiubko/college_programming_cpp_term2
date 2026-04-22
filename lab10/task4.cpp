@@ -25,9 +25,7 @@ int main()
 	cin >> n;
 
 	int* arr = new int[n];
-
 	int *ptr = &arr[0];
-
 	while (ptr < &arr[n]) {
 	
 		cout << "Введіть якесь значення для елементу масиву:";
@@ -49,7 +47,6 @@ int main()
 			kratne_5++;
 			arr_kratne_5[counter++] = index_counter;
 		}
-
 		ptr++;
 		index_counter++;
 	}
@@ -57,6 +54,13 @@ int main()
 
 
 	int* new_arr = new int[n + kratne_5];
+
+	for (int i = 0; i < n + kratne_5; i++) {
+	
+		new_arr[i] = 0;
+	
+	}
+
 
 	for (int i = 0; i < counter; i++) {
 		
@@ -72,8 +76,37 @@ int main()
 	
 	}
 
+	for (int i = 0; i < n + kratne_5; i++) {
+
+		if (new_arr[i] == 0) {
+
+			new_arr[i] = arr[i];
+		}
+
+		else {
+
+			new_arr[i + 1] = arr[i];
+
+		}
+
+	}
+		int* ptr1 = &arr[0];
+
+	cout << endl << "Первинний вигляд масиву:" << endl;
+	while (ptr1 < &arr[n]) {
 	
-// must be changed
+		cout << endl << *ptr1;
+		ptr1++;
+	}
+
+	int* ptr2 = &new_arr[0];
+
+	cout << endl << "Змінени вигляд масиву:" << endl;
+	while (ptr2 < &new_arr[n+ kratne_5]) {
+
+		cout << endl << *ptr2;
+		ptr2++;
+	}
 
 	return 0;
 }

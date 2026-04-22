@@ -20,12 +20,12 @@ int main()
 	int* ptr2 = &arr[n - 1];
 
 	while (ptr <= ptr2) {
-	
+
 		cout << "Введіть якесь значення для елементу масиву:";
 		cin >> *ptr;
 
 		ptr++;
-	
+
 	}
 
 	ptr = &arr[0];
@@ -34,21 +34,18 @@ int main()
 
 	int sum = 0;
 	while (ptr < &arr[n]) {
-		ptr2 = &arr[n - 1];
-		int notDifferent_counter = 0;
-		bool isUnique = true;
-		while (ptr2 > &arr[0]) {
-			
+		ptr2 = &arr[0];
+		bool isFirst = true;
+
+		while (ptr2 < ptr) {
 			if (*ptr2 == *ptr) {
-			
-				isUnique = false;
+				isFirst = false;
 				break;
 			}
-			
-			ptr2--;
+			ptr2++;
 		}
-		
-		if (isUnique) sum++;
+
+		if (isFirst) sum++;
 
 		ptr++;
 	}
@@ -60,6 +57,3 @@ int main()
 
 	return 0;
 }
-
-
-// must be changed

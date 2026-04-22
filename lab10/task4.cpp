@@ -101,7 +101,7 @@ int main()
 
 	int* ptr2 = &new_arr[0];
 
-	cout << endl << "Змінени вигляд масиву:" << endl;
+	cout << endl << "Змінений вигляд масиву:" << endl;
 	while (ptr2 < &new_arr[n+ kratne_5]) {
 
 		cout << endl << *ptr2;

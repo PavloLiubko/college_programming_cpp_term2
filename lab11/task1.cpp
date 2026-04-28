@@ -120,5 +120,6 @@ int main()
 		row++;
 	}
 
+		delete[] A;
 	return 0;
 }

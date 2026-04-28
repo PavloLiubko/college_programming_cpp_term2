@@ -73,7 +73,7 @@ int main()
 		column_counter = 0;
 		while (col < *row + columns) {
 
-			if (column_counter > row_counter) {
+			if (column_counter > row_counter ) {
 			
 				arr[arr_counter] = *col;
 				arr_counter++;
@@ -100,10 +100,10 @@ int main()
 	}
 
 
-	cout << endl << minimum;
+	cout << "Найменший елемент вище головної діагоналі матриці:" << minimum;
 
+	delete[] A;
+	delete[] arr;
 
 	return 0;
 }
-
-// must be changed

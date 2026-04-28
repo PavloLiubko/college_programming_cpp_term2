@@ -125,5 +125,6 @@ int main()
 
 	}
 
+		delete[] A;
 	return 0;
 }

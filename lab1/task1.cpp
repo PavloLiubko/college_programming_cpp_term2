@@ -4,13 +4,23 @@ using namespace std;
 
 int main()
 {
+    setlocale(LC_ALL, "UKR");
+    int m, n;
+    cout << "Введіть кількість рядків матриці:";
+    cin >> m;
+    cout << "Введіть кількість стовпчиків матриці:";
+    cin >> n;
 
-	int A[6][4];
+	int** A = new int*[m];
+	
+	for (int i = 0; i < m; i++) {
+	    
+	    A[i] = new int[n];
+	    
+	}
 
-	setlocale(LC_ALL, "UKR");
-
-	for (int i = 0; i < 6; i++) {
-		for (int j = 0; j < 4; j++) {
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
 		
 			cout << "Введіть якесь значення для матриці:";
 			cin >> A[i][j];
@@ -44,8 +54,5 @@ int main()
 	}
 
 	cout << "Найбільший елемент матриці = " << biggest << " його координати: " << biggest_i << " " << biggest_j;
-
-
-}
 
 

@@ -52,8 +52,9 @@ int main() {
 	}
 
 	int len = faktorial(n);
-	int* arr = new int[len];
-
+	int* arr_meanings = new int[len];
+    int* arr_indexes1 = new int[len];
+    int* arr_indexes2 = new int[len];
 	int pointer = 0;
 	for (int i = 0; i < n; i++) {
 	
@@ -61,7 +62,9 @@ int main() {
 		
 			if (j < i && G[i][j] > 0) {
 			
-				arr[pointer] = G[i][j];
+				arr_meanings[pointer] = G[i][j];
+				arr_indexes1[pointer] = i ;
+				arr_indexes2[pointer] = j ;
 				pointer += 1;
 			
 			}
@@ -73,30 +76,38 @@ int main() {
 	cout << "Наш утворений масив: \n";
 	for (int i = 0; i < n; i++) {
 	
-		cout << arr[i] << '\t';
+		cout << arr_meanings[i] << '\t';
 	}
 
-	int maximum = arr[0];
-	int minimum = arr[0];
+	int maximum = arr_meanings[0];
+	int maximum_i, maximum_j;
+	int minimum = arr_meanings[0];
+    int minimum_i, minimum_j;
 
 	for (int i = 0; i < len; i++) {
 	
-		if (arr[i] > minimum && arr[i] > 0) {
+		if (arr_meanings[i] > minimum && arr_meanings[i] > 0) {
 		
-			maximum = arr[i];
+			maximum = arr_meanings[i];
+			maximum_i = arr_indexes1[i];
+			maximum_j = arr_indexes2[i];
 	
 		}
-		else if (arr[i] < minimum && arr[i] > 0) {
+		else if (arr_meanings[i] < minimum && arr_meanings[i] > 0) {
 		
-			minimum = arr[i];
+			minimum = arr_meanings[i];
+			minimum_i = arr_indexes1[i];
+			minimum_j = arr_indexes2[i];
 
 		}
 
 	}
 
-	cout << endl << "Максимальний елемент = " << maximum << endl << "Мінімальний елемент = "  << minimum;
+	cout << endl << "Максимальний елемент = " << maximum << " з координатами" << maximum_i << " " << maximum_j <<  endl << "Мінімальний елемент = "  << minimum << " з координатами " << minimum_i << " " << minimum_j;
 
 	delete[] G;
 	
 	return 0;
+
+	// must be changed
 } 

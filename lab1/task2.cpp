@@ -7,7 +7,20 @@ int main()
 {
 	setlocale(LC_ALL, "UKR");
 
-	int F[5][5];
+    int m, n;
+    cout << "Введіть кількість рядків матриці:";
+    cin >> m;
+    cout << "Введіть кількість стовпчиків матриці:";
+    cin >> n;
+
+	int** F = new int*[m];
+	
+	for (int i = 0; i < m; i++) {
+	    
+	    F[i] = new int[n];
+	    
+	}
+
 
 	for (int i = 0; i < 5; i++) {
 	
@@ -81,4 +94,3 @@ int main()
 	return 0;
 
 }
-

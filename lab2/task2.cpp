@@ -28,21 +28,21 @@ int main() {
 	probels[0] = 0;
 	int k = 1;
 	for (int i = 1; i < S.length(); i++) {
-	
+
 		if (S[i] == ' ') {
-		
-			probels[k] = i+1;
+
+			probels[k] = i + 1;
 			k++;
-		
+
 		}
-	
+
 	}
 
 	string* words = new string[words_amount];
 	for (int i = 0; i < words_amount; i++) {
 
 		if (i + 1 < words_amount) {
-			words[i] = S.substr(probels[i], probels[i + 1] - probels[i]);
+			words[i] = S.substr(probels[i], probels[i + 1] - probels[i] - 1);
 		}
 
 		else {
@@ -54,23 +54,22 @@ int main() {
 	int* words_length = new int[words_amount];
 
 	for (int i = 0; i < words_amount; i++) {
-	
+
 		words_length[i] = words[i].length();
-	
+
 	}
 
-	words_length[0] -= 1;
 
 	int biggest = words_length[0];
 
 	for (int i = 0; i < words_amount; i++) {
-	
+
 		if (biggest < words_length[i]) {
-		
+
 			biggest = words_length[i];
-		
+
 		}
-	
+
 	}
 
 	int smallest = words_length[0];

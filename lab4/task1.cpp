@@ -10,16 +10,16 @@ void BubbleSort(Any arr[], int n) {
 	for (int i = 0; i < n - 1; i++) {
 		swapped = false;
 		for (int j = 0; j < n - i - 1; j++) {
-		
+
 			if (arr[j].grade < arr[j + 1].grade) {
-			
+
 				Any temp = arr[j];
 				arr[j] = arr[j + 1];
 				arr[j + 1] = temp;
 				swapped = true;
-			
+
 			}
-		
+
 		}
 
 		if (!swapped) break;
@@ -49,7 +49,7 @@ int main() {
 	Student* Students_group = new Student[students_amount];
 
 	for (int i = 0; i < students_amount; i++) {
-	
+
 		cout << endl << "Введіть фамілію студента:";
 		cin >> Students_group[i].surname;
 		cout << endl << "Введіть ім'я студента:";
@@ -65,21 +65,23 @@ int main() {
 	Student* rating = new Student[scholarships_amount];
 
 	for (int i = 0; i < scholarships_amount; i++) {
-	
+
 		rating[i] = Students_group[i];
-	
+
 	}
-	
+
+	cout << "\n Студентки, які отримують степендію: \n";
+
 	for (int i = 0; i < scholarships_amount; i++) {
-	
+
 		if (rating[i].sex == "f") {
-		
+
 			cout << "Ім'я студентки: " << rating[i].name << endl;
-			cout << "Фамілія студентки: " << rating[i].surname << endl ;
+			cout << "Фамілія студентки: " << rating[i].surname << endl;
 			cout << "Середній бал за сессію студентки: " << rating[i].grade << endl;
-		
+
 		}
-	
+
 	}
 
 	delete[] rating;

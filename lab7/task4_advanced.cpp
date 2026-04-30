@@ -1,4 +1,4 @@
-nclude <iostream>
+#include <iostream>
 #include <cmath>
 #include <iomanip>
 
@@ -6,14 +6,14 @@ using namespace std;
 
 float func1(float x) {
 
-	if (log(x) >= -1 ) {return sqrt(1 + log(x));}
+	if (log(x) >= -1) { return sqrt(1 + log(x)); }
 
 
 }
 
 float func2(float x) {
 
-	if (x != -1) { return (log(x + 1)) / (x + 1);}
+	if (x != -1) { return (log(x + 1)) / (x + 1); }
 
 }
 
@@ -24,15 +24,15 @@ float GetIntegral(float(*func)(float), float a, float b) {
 
 	float xi = a;
 	for (int i = 0; i < 100; i++) {
-		
+
 		points[i] = func(xi);
 		xi += h;
-	
+
 	}
 
-	float sum = (points[0] + points[99])/2;
+	float sum = (points[0] + points[99]) / 2;
 	for (int i = 1; i < 99; i++) {
-	
+
 		sum += points[i];
 
 	}

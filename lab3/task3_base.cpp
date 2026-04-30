@@ -7,7 +7,7 @@ using namespace std;
 int hasLetter(string row) {
 
 
-	char letters[12] = { 'a', 'A', 'o', 'O', 'u', 'U', 'e', 'E', 'y', 'Y', 'i', 'I'};
+	char letters[12] = { 'a', 'A', 'o', 'O', 'u', 'U', 'e', 'E', 'y', 'Y', 'i', 'I' };
 
 	int result = 0;
 
@@ -27,13 +27,14 @@ int hasLetter(string row) {
 }
 
 int main() {
+	setlocale(LC_ALL, "UKR");
 
 	string X, Y;
 
-	cout << "Введіть якийсь текст: " ;
+	cout << "Введіть якийсь текст: ";
 	getline(cin, X);
 
-	cout << "Enter second text: ";
+	cout << "Введіть якийсь другий текст: ";
 	getline(cin, Y);
 
 	cout << "Кількість голосних в першому тексті: " << hasLetter(X) << endl << "Кількість голосних в другому тексті: " << hasLetter(Y);

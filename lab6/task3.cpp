@@ -5,7 +5,7 @@ using namespace std;
 
 
 int main() {
-	
+
 	setlocale(LC_ALL, "UKR");
 
 	struct Comand {
@@ -24,7 +24,7 @@ int main() {
 	Comand* comands = new Comand[comands_amount];
 
 	for (int i = 0; i < comands_amount; i++) {
-		
+
 		cout << "Введіть назву команди:";
 		getline(cin, comands[i].name);
 		cout << "Введіть місто команди:";
@@ -37,34 +37,28 @@ int main() {
 
 	string* cities = new string[comands_amount];
 	int counter = 0;
-	for (int i = 0; i < comands_amount; i++) {
 
+	for (int i = 0; i < comands_amount; i++) {
 		bool exist = false;
-		for (int j = 0; j < comands_amount; j++) {
-		
-			if (comands[j].city == cities[i]) {
-				
+
+		for (int j = 0; j < counter; j++) {
+			if (comands[i].city == cities[j]) {
 				exist = true;
 				break;
-			
 			}
-			
-		}
-		
-		if (!exist) {
-		
-			cities[counter] = comands[i].city;
-			counter++;
-		
 		}
 
+		if (!exist) {
+			cities[counter] = comands[i].city;
+			counter++;
+		}
 	}
 
 	cout << "Міста, з яких прибули команди:\n";
 	for (int i = 0; i < comands_amount; i++) {
-	
+
 		cout << cities[i] << '\t';
-	
+		
 	}
 
 	delete[] cities;

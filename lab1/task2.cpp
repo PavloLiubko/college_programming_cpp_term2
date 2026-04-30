@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 
@@ -7,38 +6,38 @@ int main()
 {
 	setlocale(LC_ALL, "UKR");
 
-    int m, n;
-    cout << "Введіть кількість рядків матриці:";
-    cin >> m;
-    cout << "Введіть кількість стовпчиків матриці:";
-    cin >> n;
+	int m, n;
+	cout << "Введіть кількість рядків матриці:";
+	cin >> m;
+	cout << "Введіть кількість стовпчиків матриці:";
+	cin >> n;
 
-	int** F = new int*[m];
-	
+	int** F = new int* [m];
+
 	for (int i = 0; i < m; i++) {
-	    
-	    F[i] = new int[n];
-	    
+
+		F[i] = new int[n];
+
 	}
 
 
-	for (int i = 0; i < 5; i++) {
-	
-		for (int j = 0; j < 5; j++) {
-		
+	for (int i = 0; i < m; i++) {
+
+		for (int j = 0; j < n; j++) {
+
 			cout << "Введіть якийсь елемент для матриці:";
 			cin >> F[i][j];
-		
+
 		}
-	
+
 	}
 
-	cout << endl << "Наша матриця:" << endl; 
+	cout << endl << "Наша матриця:" << endl;
 
 
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < m; i++) {
 
-		for (int j = 0; j < 5; j++) {
+		for (int j = 0; j < n; j++) {
 
 			cout << F[i][j] << "\t";
 
@@ -49,21 +48,21 @@ int main()
 	}
 
 	int arr[5];
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < m; i++) {
 
 		int dobutok = 1;
-		for (int j = 0; j < 5; j++) {
+		for (int j = 0; j < n; j++) {
 
 			if (F[i][j] < 0) {
-			
+
 				dobutok *= F[i][j];
-			
+
 			}
 
 		}
 
 		arr[i] = dobutok;
-		
+
 
 
 		cout << endl;
@@ -71,15 +70,15 @@ int main()
 	}
 
 	cout << endl << "Масив з добутків:" << endl;
-	for (int i = 0; i < 5; i++) {
-	
+	for (int i = 0; i < m; i++) {
+
 		cout << arr[i] << "\t";
 
 	}
 
 	int smallest = arr[0];
 	int smallest_i;
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < m; i++) {
 
 		if (smallest > arr[i]) {
 			smallest = arr[i];

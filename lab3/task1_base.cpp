@@ -7,11 +7,11 @@ bool hasLetter(char letter) {
 	char letters[12] = { 'a', 'A', 'o', 'O', 'u', 'U', 'e', 'E', 'y', 'Y', 'i', 'I' };
 
 	for (int i = 0; i < 12; i++) {
-			if (letter == letters[i]) {
+		if (letter == letters[i]) {
 
-				return true;
+			return true;
 
-			}
+		}
 
 	}
 
@@ -21,6 +21,8 @@ bool hasLetter(char letter) {
 
 int main() {
 
+	setlocale(LC_ALL, "UKR");
+
 	string S;
 
 	cout << "Введіть якийсь текст:";
@@ -28,12 +30,22 @@ int main() {
 	int offset = 1;
 
 	string temporary = S;
-	for (int i = 0; i < S.length();i++ ) {
+	for (int i = 0; i < S.length();i++) {
 
 		if (hasLetter(S[i])) {
-		
+
 			temporary.insert(i + offset, 1, S[i]);
 			offset++;
+		}
+
+	}
+
+	for (int i = 0; i < S.length();i++) {
+
+		if (temporary[i] == ' ') {
+
+			temporary.replace(i, 1, "");
+
 		}
 
 	}

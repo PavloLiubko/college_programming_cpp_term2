@@ -7,7 +7,7 @@ int main() {
 
 	setlocale(LC_ALL, "UKR");
 
-	
+
 	string S;
 	cout << "Введіть якийсь текст:";
 	getline(cin, S);
@@ -15,27 +15,10 @@ int main() {
 	string result = "";
 
 	for (int i = 0; i < S.length(); i++) {
-	
-		if (i == 0) {
-		
-			if (i + 1 < S.length()) {
-			
-				result += S[i];
 
-				if (i + 2 < S.length()) {
-				
-					result += S[i+1];
-
-				}
-
-				result += ' ';
-			
-			}
-		
-		}
 
 		if (S[i] == ' ' && i + 1 < S.length()) {
-		
+
 			result += S[i + 1];
 
 			if (i + 2 < S.length()) {
@@ -45,7 +28,7 @@ int main() {
 			}
 
 			result += ' ';
-		
+
 		}
 
 	}

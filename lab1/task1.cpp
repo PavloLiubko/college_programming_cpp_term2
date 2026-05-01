@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 
@@ -39,13 +40,13 @@ int main()
 		cout << "\n";
 	}
 
-	int biggest = A[0][0];
-	int biggest_i, biggest_j;
+	int biggest = abs(A[0][0]);
+	int biggest_i = 0, biggest_j = 0;
 	for (int i = 0; i < m; i++) {
 		for (int j = 0; j < n; j++) {
 
-			if (A[i][j] > biggest) {
-				biggest = A[i][j];
+			if (abs(A[i][j]) > biggest) {
+				biggest = abs(A[i][j]);
 				biggest_i = i;
 				biggest_j = j;
 			}
@@ -53,7 +54,7 @@ int main()
 		}
 	}
 
-	cout << "Найбільший елемент матриці = " << biggest << " його координати: " << biggest_i << " " << biggest_j;
+	cout << "Найбільший елемент матриці за модулем це елемент з координатами " << biggest_i << " " << biggest_j;
 
 	return 0;
 }

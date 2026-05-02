@@ -28,8 +28,9 @@ int main() {
     while (current != nullptr) {
        if (current->Data %2 == 0)  {
            counter++; 
-           current = current->next;
+           
        }
+       current = current->next;
     }
     
     cout << "\n Кількість парних елементів = " << counter;

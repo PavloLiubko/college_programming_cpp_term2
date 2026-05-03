@@ -31,7 +31,7 @@ int main() {
     for (int i = 0; i < n-1; i++) {
         Node* newNode = new Node;
         newNode->ID = current->ID + 1;
-        newNode->Data = rand() % 100 + 1;
+        newNode->Data = rand() % 10 + (-15);
         newNode->next = nullptr;
         newNode->previous = current;
         current->next = newNode;

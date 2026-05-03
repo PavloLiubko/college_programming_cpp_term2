@@ -18,7 +18,20 @@ int main() {
     a->next = c;
 
     cout << "\n Наш список: \n";
-    Node *current = b;
+    Node* current = b;
+    while (current != nullptr) {
+
+        cout << current->Data << "->";
+        current = current->next;
+    }
+    cout << "nullptr";
+
+    b->next = c;
+
+    delete a;
+
+    cout << "\n Наш кінцевий список: \n";
+    current = b;
     while (current != nullptr) {
 
         cout << current->Data << "->";
@@ -29,11 +42,10 @@ int main() {
     current = b;
     while (current != nullptr) {
 
-        Node* temp = current-> next;
+        Node* temp = current->next;
         delete current;
         current = temp;
     }
-
 
     return 0;
 }

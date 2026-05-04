@@ -47,6 +47,8 @@ int main() {
 
     }
 
+    file.close();
+    
     delete[] arr;
 
     return 0;

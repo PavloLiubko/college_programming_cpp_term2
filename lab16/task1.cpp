@@ -16,7 +16,9 @@ int main() {
 
     if (file.is_open()) {
         file << S;
+        file.close();
     }
 
+    
     return 0;
 }

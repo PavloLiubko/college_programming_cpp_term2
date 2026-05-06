@@ -7,6 +7,7 @@ using namespace std;
 
 int main()
 {
+	setlocale(LC_ALL, "UKR");
 
 	ofstream outFile("lab18_3");
 
@@ -25,24 +26,31 @@ int main()
 	char ch;
 	int enterCounter = 1;
 	while (inFile.get(ch)) {
-	
+
 		if (ch == '\n') enterCounter++;
-	
+
 	}
+
+	inFile.clear();
+	inFile.seekg(0, ios::beg);
 
 	int* SymbAmount = new int[enterCounter];
 	int counter = 0;
 	while (getline(inFile, line)) {
-	
+
 		SymbAmount[counter] = line.length();
 		counter++;
 	}
 
-	cout << SymbAmount[2];
 
 	inFile.close();
 
+	cout << "\n Кількість символів у кожному з рялдків:\n";
+	for (int i = 0; i < enterCounter; i++) {
+	
+		cout << endl << SymbAmount[i];
+	
+	}
+
 	return 0;
 }
-
-// must be changed
